@@ -14,7 +14,7 @@ import { customization } from "@/redux/slices/customizationSlice";
 import AdbIcon from "@mui/icons-material/Adb";
 import AnalyticsIcon from "@mui/icons-material/Analytics";
 const Sidebar = ({ lang }: { lang: Locale }) => {
-    const hasLoginPage = process.env.NEXT_PUBLIC_HASLOGINPAGE === "true";
+    const hasLoginPage = true;
     const router = useRouter();
     const cookies = new Cookies();
     const { width } = useWindowSize();
