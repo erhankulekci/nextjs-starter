@@ -16,7 +16,7 @@ import { customization } from "@/redux/slices/customizationSlice";
 
 const Navigation = ({ lang }: { lang: Locale }) => {
     const [isNotificationsOpened, setIsNotificationsOpened] = useState<boolean>(false);
-    const hasLoginPage = process.env.NEXT_PUBLIC_HASLOGINPAGE === "true";
+    const hasLoginPage = true;
     const cookies = new Cookies();
     const router = useRouter();
     const { width } = useWindowSize();
