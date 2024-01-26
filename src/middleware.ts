@@ -28,7 +28,7 @@ export async function middleware(request: NextRequest) {
     );
     const { value: token } = cookies.get("token") || { value: null };
     const isAuthPageRequested: boolean = isAuthPages(nextUrl.pathname);
-    const hasLoginPage = process.env.NEXT_PUBLIC_HASLOGINPAGE ? process.env.NEXT_PUBLIC_HASLOGINPAGE === "true": true;
+    const hasLoginPage = true;
 
     if (
         pathname.startsWith("/_next") ||
