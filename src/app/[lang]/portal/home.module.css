@@ -1,0 +1,86 @@
+@import url("https://fonts.cdnfonts.com/css/segoe-ui");
+
+.heroContainer {
+    display: flex;
+    align-items: center;
+    margin-top: 60px;
+    justify-content: space-around;
+    gap: 2rem;
+}
+
+.heroContent {
+    max-width: 750px;
+    flex-basis: 60%;
+}
+
+@media screen and (max-width: 1044px) {
+    .heroContainer {
+        flex-direction: column;
+        justify-content: center;
+    }
+    .heroContent {
+        margin-right: auto;
+        max-width: 100vw;
+        padding: 1rem;
+    }
+    .heroParagraph {
+        text-align: start !important;
+    }
+    .heroButtons {
+        flex-direction: column;
+    }
+}
+
+.heroHeading {
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.heroParagraph {
+    color: #2e4256;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 32px;
+    margin-top: 24px;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    text-align: justify;
+}
+
+.heroButtons {
+    display: flex;
+    gap: 20px;
+    margin-top: 3.5rem;
+    height: 47.7px;
+}
+
+.heroSkeletonContainer {
+    display: flex;
+    gap: 4rem;
+    margin: 80px 0 80px 0;
+}
+
+.heroSkeletonLeft {
+    display: flex;
+    flex-direction: column;
+    max-width: 1016px;
+}
+
+.heroSkeletonButtons {
+    display: flex;
+    gap: 20px;
+}
+
+.heroImageContainer {
+    max-height: 557px;
+    max-width: 100%;
+    flex-basis: 40%;
+    display: flex;
+    align-items: flex-end;
+}
+.heroImage {
+    max-width: 100%;
+}

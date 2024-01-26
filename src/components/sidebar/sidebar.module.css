@@ -1,0 +1,19 @@
+.sidebarMobile {
+    z-index: 999;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    max-width: 300px;
+    width: 100%;
+    overflow: hidden;
+    background: linear-gradient(180deg, #107586 0%, #1a5770 18.02%, #350435 85.21%);
+}
+
+.menuButton {
+    background-color: transparent;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    font-size: 20px;
+}

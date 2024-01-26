@@ -1,0 +1,8 @@
+.copyRightContainer {
+    padding: 1rem;
+    background: rgba(37, 37, 37, 0.3);
+    width: 100%;
+}
+.copyRightText {
+    color: #fff;
+}
