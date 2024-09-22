@@ -1,10 +1,10 @@
 "use client";
 import React from "react";
-import { Stepper as GibStepper, StepperProps } from "@gib-ui/core";
+import { GibStepper, GibStepperProps } from "@gib-ui/core";
 import { useAppSelector } from "@/redux/hooks";
 import { customization } from "@/redux/slices/customizationSlice";
 
-const Stepper = ({ color, activeStepBgColor, ...rest }: StepperProps) => {
+const Stepper = ({ color, activeStepBgColor, ...rest }: GibStepperProps) => {
     const styles = useAppSelector(customization);
     return (
         <GibStepper

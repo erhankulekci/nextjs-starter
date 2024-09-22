@@ -8,20 +8,19 @@ import { getTranslate } from "@/lib";
 import { Locale } from "@/root/i18n.config";
 import registerAnimation from "@/assets/animation/register.json";
 import { Layout } from "../components";
-import { useRouter } from "next/navigation";
 import { Icons } from "@gib-ui/icons";
 import { useAppSelector } from "@/redux/hooks";
 import { customization } from "@/redux/slices/customizationSlice";
+import { navigate } from "@/utils/navigate";
 
 const RegisterPage = ({ params }: { params: { lang: Locale } }) => {
     const { register } = getTranslate(params.lang).page;
-    const router = useRouter();
     const [showPassword, setShowPassword] = React.useState(false);
     const { primaryColor } = useAppSelector(customization);
     const handleClickShowPassword = () => setShowPassword((show) => !show);
 
     const afterSubmit = () => {
-        router.push(`/${params.lang}/login`);
+        navigate(`/${params.lang}/login`);
     };
 
     return (

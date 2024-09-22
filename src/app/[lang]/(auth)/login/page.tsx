@@ -1,7 +1,7 @@
 "use client";
 import React from "react";
 import Link from "next/link";
-import { useRouter, useSearchParams } from "next/navigation";
+import { useSearchParams } from "next/navigation";
 import Cookies from "universal-cookie";
 import { Grid, IconButton, Typography } from "@gib-ui/core";
 import { Button } from "@/components";
@@ -13,9 +13,9 @@ import { Layout } from "../components";
 import { Icons } from "@gib-ui/icons";
 import { useAppSelector } from "@/redux/hooks";
 import { customization } from "@/redux/slices/customizationSlice";
+import { navigate } from "@/utils/navigate";
 
 const LoginPage = ({ params }: { params: { lang: Locale } }) => {
-    const router = useRouter();
     const searchParams = useSearchParams();
     const cookies = new Cookies();
     const { login } = getTranslate(params.lang).page;
@@ -36,7 +36,7 @@ const LoginPage = ({ params }: { params: { lang: Locale } }) => {
         if (!res?.hasErrorOrWarningMessages && res?.token) {
             cookies.set("token", res?.token, { path: "/" });
             const nextUrl = searchParams.get("redirectUrl");
-            router.push(nextUrl || `/${params.lang}/portal`);
+            navigate(nextUrl || `/${params.lang}/portal`);
         }
     };
 

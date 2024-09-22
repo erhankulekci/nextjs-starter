@@ -1,12 +1,13 @@
 "use client";
 import React from "react";
-import { Footer, useWindowSize } from "@gib-ui/core";
+import { Footer } from "@gib-ui/core";
 import { Locale } from "@/root/i18n.config";
 import { getTranslate } from "@/lib";
 import Image from "next/image";
 import { useAppSelector } from "@/redux/hooks";
 import { customization } from "@/redux/slices/customizationSlice";
 import styles from "./footer.module.css";
+import { useWindowSize } from "@/hooks";
 
 const SampleFooter = ({ lang }: { lang: Locale }) => {
     const { section1, section2, section3 } = getTranslate(lang).footer;

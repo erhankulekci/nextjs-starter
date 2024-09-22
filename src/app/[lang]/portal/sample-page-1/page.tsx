@@ -1,7 +1,11 @@
 "use client";
 import { Form, InputField, ListComponent } from "@/components";
-import { columns, rows } from "@/enums/pages/samplePage1";
-import { Breadcrumbs, Grid, Paper, Stack, useWindowSize } from "@gib-ui/core";
+import {
+    columns,
+    rows
+    // testColumns
+} from "@/enums/pages/samplePage1";
+import { Breadcrumbs, Grid, Paper, Stack } from "@gib-ui/core";
 import { Locale } from "@/root/i18n.config";
 import { useSnackbar } from "notistack";
 import { useRef, useState } from "react";
@@ -9,11 +13,11 @@ import { getTranslate } from "@/lib";
 import * as yup from "yup";
 import { useAppSelector } from "@/redux/hooks";
 import { customization } from "@/redux/slices/customizationSlice";
+import { useWindowSize } from "@/hooks";
 
 const SamplePage1 = ({ params }: { params: { lang: Locale } }) => {
     const { navigation, page } = getTranslate(params.lang);
     const styles = useAppSelector(customization);
-
     const { width } = useWindowSize();
     const [gridRows, setGridRows] = useState(rows);
     const formRef = useRef<any>();
@@ -38,6 +42,23 @@ const SamplePage1 = ({ params }: { params: { lang: Locale } }) => {
             variant: "success"
         });
     };
+
+    // const mapDataBeforeList = (response: any) => {
+    //     if (!response?.error && response?.products) {
+    //         const result = response.products?.map((item: any) => {
+    //             const { id, title, description, price } = item;
+    //             return {
+    //                 id,
+    //                 title,
+    //                 description,
+    //                 price
+    //             };
+    //         });
+    //         return result;
+    //     } else {
+    //         return [];
+    //     }
+    // };
 
     return (
         <Stack spacing={3} ml={width < 1200 ? "22px" : "0"}>
@@ -95,7 +116,17 @@ const SamplePage1 = ({ params }: { params: { lang: Locale } }) => {
                         </Grid>
                     </Grid>
                 </Form>
-                <ListComponent locale={params.lang} columns={columns} rows={gridRows} />
+                {/* Static Data */}
+                <ListComponent locale={params.lang} columns={columns} staticData={gridRows} />
+                {/* Server-Side */}
+                {/* <ListComponent
+                    locale={params.lang}
+                    url="/products"
+                    columns={testColumns}
+                    mapDataBeforeList={mapDataBeforeList}
+                    sortField="price"
+                    method="GET"
+                /> */}
             </Paper>
         </Stack>
     );

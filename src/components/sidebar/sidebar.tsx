@@ -1,21 +1,21 @@
 "use client";
 import React, { useEffect, useRef, useState } from "react";
-import { Backdrop, SideMenu, useWindowSize } from "@gib-ui/core";
-import { useRouter } from "next/navigation";
+import { Backdrop } from "@gib-ui/core";
 import { Locale } from "@/root/i18n.config";
 import { getTranslate } from "@/lib";
 import { useAppSelector, useAppDispatch } from "@/redux//hooks";
 import { showSidebar, setShowSidebar } from "@/redux/slices/sidebarSlice";
 import styles from "./sidebar.module.css";
 import Image from "next/image";
-import { Home } from "@gib-ui/icons";
+import { Home, Icons } from "@gib-ui/icons";
 import Cookies from "universal-cookie";
 import { customization } from "@/redux/slices/customizationSlice";
-import AdbIcon from "@mui/icons-material/Adb";
-import AnalyticsIcon from "@mui/icons-material/Analytics";
+import { useWindowSize } from "@/hooks";
+import { navigate } from "@/utils/navigate";
+import SideMenu from "./sideMenu";
+
 const Sidebar = ({ lang }: { lang: Locale }) => {
-    const hasLoginPage = true;
-    const router = useRouter();
+    const hasLoginPage = process.env.NEXT_PUBLIC_HASLOGINPAGE === "true";
     const cookies = new Cookies();
     const { width } = useWindowSize();
     const { navigation } = getTranslate(lang);
@@ -36,26 +36,44 @@ const Sidebar = ({ lang }: { lang: Locale }) => {
         {
             id: "1",
             label: navigation.page1,
-            icon: <AnalyticsIcon sx={iconStyle} />,
-            url: `/${lang}/portal/sample-page-1`
+            icon: <Icons.Analytics sx={iconStyle} />,
+            url: `/${lang}/portal/sample-page-1`,
+            children: [
+                {
+                    id: "1.1",
+                    label: "label 1.1"
+                },
+                {
+                    id: "1.2",
+                    label: "label 1.2"
+                },
+                {
+                    id: "1.3",
+                    label: "label 1.3"
+                },
+                {
+                    id: "1.4",
+                    label: "label 1.4"
+                }
+            ]
         },
         {
             id: "2",
             label: navigation.page2,
-            icon: <AdbIcon sx={iconStyle} />,
+            icon: <Icons.Adb sx={iconStyle} />,
             url: `/${lang}/portal/sample-page-2`
         },
         {
             id: "3",
             label: navigation.page3,
-            icon: <AdbIcon sx={iconStyle} />,
+            icon: <Icons.Adb sx={iconStyle} />,
             url: `/${lang}/portal/sample-page-3`
         }
     ];
 
     const handleItemClick = (item: any) => {
         if (item.url) {
-            router.push(item.url);
+            navigate(item.url);
         }
         dispatch(setShowSidebar(false));
     };
@@ -72,7 +90,7 @@ const Sidebar = ({ lang }: { lang: Locale }) => {
 
     const handleLogout = () => {
         cookies.remove("token", { path: "/" });
-        router.push(`/${lang}/login`);
+        navigate(`/${lang}/login`);
     };
 
     const handleBackdropClick = (event: React.MouseEvent<HTMLDivElement, MouseEvent>) => {
@@ -118,7 +136,6 @@ const Sidebar = ({ lang }: { lang: Locale }) => {
                             customStyles={{
                                 sideMenuContainer: {
                                     minHeight: "110vh !important",
-                                    // background: "linear-gradient(180deg, #2A80B9 0%, #2D3F51 100%)"
                                     background: customizationStyles.sidebarBgColor
                                 },
                                 textFieldFormControlStyle: {
@@ -145,12 +162,10 @@ const Sidebar = ({ lang }: { lang: Locale }) => {
                     menuItems={menuItems}
                     onItemClick={handleItemClick}
                     menuSearch
-                    //initiallySmallMenu will be working after version 0.0.45
-                    initiallySmallMenu={true}
+                    isSmallMenu={true}
                     customStyles={{
                         sideMenuContainer: {
                             width: "350px",
-                            // background: "linear-gradient(180deg, #2A80B9 0%, #2D3F51 100%)",
                             background: customizationStyles.sidebarBgColor,
                             minHeight: "80vh !important"
                         },
@@ -169,7 +184,6 @@ const Sidebar = ({ lang }: { lang: Locale }) => {
                             display: "flex",
                             justifyContent: "center",
                             alignItems: "center",
-                            // backgroundColor: "#0A808B"
                             backgroundColor: customizationStyles.sidebarBgColor
                         }
                     }}

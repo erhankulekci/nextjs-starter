@@ -1,5 +1,6 @@
 import React, { useEffect, useRef, useState } from "react";
-import { Backdrop, Card, Grid, SearchInput, Stack, useWindowSize } from "@gib-ui/core";
+import { Backdrop, Card, Grid, SearchInput, Stack } from "@gib-ui/core";
+import { useWindowSize } from "@/hooks";
 
 const SearchLayout = ({ children }: { children: React.ReactElement }) => {
     const { width } = useWindowSize();

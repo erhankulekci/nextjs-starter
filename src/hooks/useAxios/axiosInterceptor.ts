@@ -1,6 +1,6 @@
 "use client";
+import { navigate } from "@/utils/navigate";
 import axios, { AxiosError, AxiosResponse, InternalAxiosRequestConfig } from "axios";
-import { useRouter } from "next/navigation";
 import Cookies from "universal-cookie";
 
 axios.defaults.baseURL = process.env.NEXT_PUBLIC_BASE_URL;
@@ -50,9 +50,8 @@ instance.interceptors.response.use(
     (error) => {
         if (error.response) {
             if (error?.response?.status === 401) {
-                const router = useRouter();
                 cookies.remove("token");
-                router.push("/login");
+                navigate("/login");
             }
             return Promise.reject(error);
         } else {

@@ -1,7 +1,7 @@
 "use client";
 import { getTranslate } from "@/lib";
 import { Locale } from "@/root/i18n.config";
-import { Box, Breadcrumbs, Grid } from "@gib-ui/core";
+import { Box, Breadcrumbs, Grid, TextEditor } from "@gib-ui/core";
 import {
     Alert,
     Autocomplete,
@@ -14,8 +14,12 @@ import {
 import { columns, rows } from "@/enums/pages/samplePage1";
 import { useAppSelector } from "@/redux/hooks";
 import { customization } from "@/redux/slices/customizationSlice";
+import { useState } from "react";
 
 const SamplePage2 = ({ params }: { params: { lang: Locale } }) => {
+    const [editor1Content, setEditor1Content] = useState<any>();
+    const [editor2Content, setEditor2Content] = useState<any>();
+
     const { navigation, page } = getTranslate(params.lang);
     const styles = useAppSelector(customization);
     const { page2 } = page;
@@ -117,7 +121,25 @@ const SamplePage2 = ({ params }: { params: { lang: Locale } }) => {
                     </Grid>
                 </Grid>
             </Grid>
-            <ListComponent columns={columns} rows={rows} locale={params.lang} />
+            <ListComponent columns={columns} staticData={rows} locale={params.lang} />
+            {/* Aşağıdaki örnekte gönderilen setEditorContent fonksiyonu, editördeki her değişiklikte tetiklenmektedir. 
+            Dolayısıyla projedeki editor1Content state'i, editörde yapılan her değişiklikte (bir mouse veya klavye "enter" eventinden sonra) değişir. */}
+            <Box>
+                <TextEditor setEditorContent={setEditor1Content} getEditorContentOnChange />
+                <Button sx={{ width: "fit-content" }} onClick={() => console.log(editor1Content)}>
+                    Log Editor 1 Content
+                </Button>
+            </Box>
+            {/* Aşağıdaki örnekte ise bir button yardımıyla setEditor2Content fonksiyonu tetiklenir. customLogButton propu kullanarak, editör içeriğini
+             almak için gerekli olan button, default olanı kullanmak yerine özel olarak gönderilebilir. customLogButton propu kullanılmazsa gib-ui 
+             tarafındaki default button kullanılır. Ancak butona tıklandığında setEditorContent fonksiyonu tetiklenir, dolayısıyla butona tıklanmadan
+              editör içeriği console.log yapılırsa konsolda güncellenmeyen içerik görünür.*/}
+            <Box>
+                <TextEditor showGetEditorContentButton setEditorContent={setEditor2Content} />
+                <Button sx={{ marginTop: "1rem" }} onClick={() => console.log(editor2Content)}>
+                    Log Editor 2 Content
+                </Button>
+            </Box>
         </Box>
     );
 };

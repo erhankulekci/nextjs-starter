@@ -1,7 +1,10 @@
 import React from "react";
-import { Box, Grid, Stack, useWindowSize } from "@gib-ui/core";
+import { Box, Grid, Stack } from "@gib-ui/core";
 import { Header } from ".";
-import Lottie from "lottie-react";
+import dynamic from "next/dynamic";
+import { useWindowSize } from "@/hooks";
+
+const Lottie = dynamic(() => import("lottie-react"), { ssr: false });
 
 const Layout = ({ children, animation }: { children: React.ReactNode; animation: any }) => {
     const { width } = useWindowSize();

@@ -78,7 +78,7 @@ const Step2 = ({ lang }: { lang: Locale }) => {
                 />
             </Grid>
             <Paper sx={{ py: 3, my: "2rem", display: "grid" }}>
-                <ListComponent locale={lang} columns={columns} rows={rows} />
+                <ListComponent locale={lang} columns={columns} staticData={rows} />
             </Paper>
         </>
     );

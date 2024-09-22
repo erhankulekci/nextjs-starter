@@ -1,24 +1,23 @@
 "use client";
-import { useRouter } from "next/navigation";
 import Cookies from "universal-cookie";
 import styles from "../header.module.css";
 import LocaleSwitcher from "../localeSwitcher";
 import { Locale } from "@/root/i18n.config";
 import { getTranslate } from "@/lib";
-import { Badge, Grid, Typography, useWindowSize } from "@gib-ui/core";
+import { Badge, ClickAwayListener, Grid, Typography } from "@gib-ui/core";
 import { useAppSelector, useAppDispatch } from "@/redux//hooks";
 import { showSidebar, setShowSidebar } from "@/redux/slices/sidebarSlice";
 import { Icons } from "@gib-ui/icons";
 import { useState } from "react";
-import { ClickAwayListener } from "@mui/base";
 import NotificationCard from "./notificationCard";
 import { customization } from "@/redux/slices/customizationSlice";
+import { useWindowSize } from "@/hooks";
+import { navigate } from "@/utils/navigate";
 
 const Navigation = ({ lang }: { lang: Locale }) => {
     const [isNotificationsOpened, setIsNotificationsOpened] = useState<boolean>(false);
-    const hasLoginPage = true;
+    const hasLoginPage = process.env.NEXT_PUBLIC_HASLOGINPAGE === "true";
     const cookies = new Cookies();
-    const router = useRouter();
     const { width } = useWindowSize();
     const { navigation } = getTranslate(lang);
     const show = useAppSelector(showSidebar);
@@ -26,7 +25,7 @@ const Navigation = ({ lang }: { lang: Locale }) => {
     const dispatch = useAppDispatch();
     const handleLogout = () => {
         cookies.remove("token", { path: "/" });
-        router.push(`/${lang}/login`);
+        navigate(`/${lang}/login`);
     };
     const openNotifications = () => {
         setIsNotificationsOpened(!isNotificationsOpened);

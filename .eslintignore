@@ -1,0 +1,17 @@
+# Ignore defaults:
+**/.git
+**/.svn
+**/.hg
+**/node_modules
+*.json
+
+# Ignore artifacts:
+build
+coverage
+public
+helm
+.vscode
+CHANGELOG.md
+.npmrc
+.env-cmdrc
+package.json

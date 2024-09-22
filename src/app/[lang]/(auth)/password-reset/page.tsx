@@ -8,16 +8,15 @@ import { getTranslate } from "@/lib";
 import { Locale } from "@/root/i18n.config";
 import forgotPasswordAnimation from "@/assets/animation/forgot-password.json";
 import { Layout } from "../components";
-import { useRouter } from "next/navigation";
 import { useAppSelector } from "@/redux/hooks";
 import { customization } from "@/redux/slices/customizationSlice";
+import { navigate } from "@/utils/navigate";
 
 const PasswordReset = ({ params }: { params: { lang: Locale } }) => {
     const { passwordReset } = getTranslate(params.lang).page;
-    const router = useRouter();
     const { primaryColor } = useAppSelector(customization);
     const afterSubmit = () => {
-        router.push(`/${params.lang}/login`);
+        navigate(`/${params.lang}/login`);
     };
 
     return (

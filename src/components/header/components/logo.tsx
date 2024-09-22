@@ -4,7 +4,7 @@ import { Locale } from "@/root/i18n.config";
 import styles from "../header.module.css";
 import Image from "next/image";
 import Link from "next/link";
-import { useWindowSize } from "@gib-ui/core";
+import { useWindowSize } from "@/hooks";
 
 const Logo = ({ lang }: { lang: Locale }) => {
     const { width } = useWindowSize();
