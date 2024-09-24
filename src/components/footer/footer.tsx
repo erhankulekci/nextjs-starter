@@ -3,15 +3,13 @@ import React from "react";
 import { Footer } from "@sphinx-ui/core";
 import { Locale } from "@/root/i18n.config";
 import { getTranslate } from "@/lib";
-import Image from "next/image";
 import { useAppSelector } from "@/redux/hooks";
 import { customization } from "@/redux/slices/customizationSlice";
 import styles from "./footer.module.css";
-import { useWindowSize } from "@/hooks";
+import { Logo } from "../header/components";
 
 const SampleFooter = ({ lang }: { lang: Locale }) => {
     const { section1, section2, section3 } = getTranslate(lang).footer;
-    const { width } = useWindowSize();
     const customizationStyles = useAppSelector(customization);
 
     const sections = [
@@ -77,28 +75,20 @@ const SampleFooter = ({ lang }: { lang: Locale }) => {
         }
     };
     const ContentLeft = () => {
-        return (
-            <Image
-                src={width < 600 ? "/Logo-light-mini.svg" : "/Logo-light.svg"}
-                width={230}
-                height={35}
-                alt="logo"
-            />
-        );
+        return <Logo />;
     };
     return (
         <>
             <Footer
                 background={customizationStyles.footerBgColor}
                 sections={sections}
-                mobileViewSize={698}
+                mobileViewSize={964}
                 customStyles={customStyles}
                 contentLeft={<ContentLeft />}
                 contentBottom={
                     <div className={styles.copyRightContainer}>
                         <span className={styles.copyRightText}>
-                            Copyright © {new Date().getFullYear()} T.C. Gelir İdaresi Başkanlığı -
-                            GİBTeknoloji
+                            Copyright © {new Date().getFullYear()} Sphinx
                         </span>
                     </div>
                 }

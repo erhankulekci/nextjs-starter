@@ -64,7 +64,7 @@ const tr = {
             snackbarMessage: "Kişi ekleme başarılı"
         },
         page2: {
-            title: "GİB-UI Components Örnek Sayfa"
+            title: "SPHINX-UI Components Örnek Sayfa"
         },
         page3: {
             title: "Sayfa 3",

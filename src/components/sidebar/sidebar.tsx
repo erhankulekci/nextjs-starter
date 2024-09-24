@@ -6,13 +6,13 @@ import { getTranslate } from "@/lib";
 import { useAppSelector, useAppDispatch } from "@/redux//hooks";
 import { showSidebar, setShowSidebar } from "@/redux/slices/sidebarSlice";
 import styles from "./sidebar.module.css";
-import Image from "next/image";
 import { Home, Icons } from "@gib-ui/icons";
 import Cookies from "universal-cookie";
 import { customization } from "@/redux/slices/customizationSlice";
 import { useWindowSize } from "@/hooks";
 import { navigate } from "@/utils/navigate";
 import SideMenu from "./sideMenu";
+import { Logo } from "../header/components";
 
 const Sidebar = ({ lang }: { lang: Locale }) => {
     const hasLoginPage = process.env.NEXT_PUBLIC_HASLOGINPAGE === "true";
@@ -119,14 +119,7 @@ const Sidebar = ({ lang }: { lang: Locale }) => {
                         <SideMenu
                             menuItems={menuItems}
                             onItemClick={handleItemClick}
-                            logo={
-                                <Image
-                                    src={width < 600 ? "/Logo-light-mini.svg" : "/Logo-light.svg"}
-                                    width={230}
-                                    height={35}
-                                    alt="logo"
-                                />
-                            }
+                            logo={<Logo />}
                             closeIcon
                             closeIconOnClick={() => dispatch(setShowSidebar(false))}
                             showActionButton={hasLoginPage}

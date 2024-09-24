@@ -66,9 +66,7 @@
 ## Kullanılan paketler
 
 
-* @sphinx-ui/core: Tutarlı tasarım için GİB bünyesine oluşturulmuş kullanıcı arayüzü bileşenleri kütüphanesi.
-
-* @gib-ui/icons: Gelişmiş görsel öğeler içeren GİB Bünyesinde oluşturulmuş icon kütüphanesi.
+* @sphinx-ui/core: Tutarlı tasarım için Sphinx bünyesine oluşturulmuş kullanıcı arayüzü bileşenleri kütüphanesi.
 
 * @hookform/resolvers: Etkili form doğrulama için form çözümleyicisi.
 

@@ -59,3 +59,33 @@
     justify-content: center;
     cursor: pointer;
 }
+
+.logoContainer {
+    display: flex;
+    align-items: center;
+}
+
+.logoTextContainer {
+    display: flex;
+    flex-direction: column;
+    margin-left: 10px;
+}
+
+.logoMainText {
+    font-size: 12px;
+    font-weight: bold;
+    color: #fff;
+    letter-spacing: 3px;
+}
+
+.logoSubText {
+    font-size: 9.5px;
+    color: #fff;
+    text-transform: uppercase;
+    min-width: max-content;
+    letter-spacing: 1px;
+}
+.logoImage {
+    filter: brightness(0) invert(1);
+    mix-blend-mode: lighten;
+}
