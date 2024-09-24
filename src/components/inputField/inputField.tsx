@@ -1,7 +1,7 @@
 "use client";
 import React from "react";
 import { Controller, useFormContext } from "react-hook-form";
-import { TextField, TextFieldProps } from "@gib-ui/core";
+import { TextField, TextFieldProps } from "@sphinx-ui/core";
 import { useAppSelector } from "@/redux/hooks";
 import { customization } from "@/redux/slices/customizationSlice";
 

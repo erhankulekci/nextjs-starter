@@ -1,7 +1,7 @@
 "use client";
 import { getTranslate } from "@/lib";
 import { Locale } from "@/root/i18n.config";
-import { Box, Breadcrumbs, Grid, TextEditor } from "@gib-ui/core";
+import { Box, Breadcrumbs, Grid, TextEditor } from "@sphinx-ui/core";
 import {
     Alert,
     Autocomplete,
@@ -131,7 +131,7 @@ const SamplePage2 = ({ params }: { params: { lang: Locale } }) => {
                 </Button>
             </Box>
             {/* Aşağıdaki örnekte ise bir button yardımıyla setEditor2Content fonksiyonu tetiklenir. customLogButton propu kullanarak, editör içeriğini
-             almak için gerekli olan button, default olanı kullanmak yerine özel olarak gönderilebilir. customLogButton propu kullanılmazsa gib-ui 
+             almak için gerekli olan button, default olanı kullanmak yerine özel olarak gönderilebilir. customLogButton propu kullanılmazsa sphinx-ui 
              tarafındaki default button kullanılır. Ancak butona tıklandığında setEditorContent fonksiyonu tetiklenir, dolayısıyla butona tıklanmadan
               editör içeriği console.log yapılırsa konsolda güncellenmeyen içerik görünür.*/}
             <Box>

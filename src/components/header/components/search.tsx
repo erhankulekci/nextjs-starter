@@ -1,6 +1,6 @@
 "use client";
 import React, { useState } from "react";
-import { Grid, Tooltip } from "@gib-ui/core";
+import { Grid, Tooltip } from "@sphinx-ui/core";
 import { Icons } from "@gib-ui/icons";
 import Link from "next/link";
 import { Locale } from "@/root/i18n.config";

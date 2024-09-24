@@ -2,7 +2,7 @@ const tr = {
     navigation: {
         home: "Ana Sayfa",
         page1: "Örnek Sayfa",
-        page2: "Gib-Ui Kullanımlar",
+        page2: "Sphinx-Ui Kullanımlar",
         page3: "İleri Seviye Form",
         logoutButton: "Çıkış Yap",
         notification: "Bildirimler",
@@ -21,7 +21,7 @@ const tr = {
             notFoundButton: "404 Sayfası",
             skeletonButton: "Skeleton Kullanımı",
             heroParagraph: [
-                "GIB UI başlangıç projesine hoş geldiniz!",
+                "SPHINX UI başlangıç projesine hoş geldiniz!",
                 "Bu kütüphane, modern web uygulamaları geliştirmek isteyenler için optimize edilmiş bir başlangıç noktasıdır. Kapsamlı özellik seti ve kullanıcı dostu API'larıyla, projelerinizi hızla başlatmanıza ve güçlü bir frontend deneyimi oluşturmanıza yardımcı olur. Hem yeni başlayanlar hem de deneyimli geliştiriciler için uygun olan bu kütüphane, günümüz teknolojilerini kullanarak gelişmiş, etkileşimli ve şık kullanıcı arayüzleri oluşturmanıza olanak tanır. Proje, modern tasarım prensiplerini içerir ve kullanıcı dostu arayüzler oluşturmak için gerekli temel yapı taşlarını sunar.",
                 "Hızlı bir şekilde projenize başlamak ve etkileyici bir kullanıcı deneyimi oluşturmak için bu starter projesini kullanmaya başlayın!"
             ]
@@ -104,7 +104,7 @@ const tr = {
             title: "Tasarım",
             resetButtonText: "Sıfırla",
             colors: {
-                gib: "GİB",
+                sphinx: "Sphinx",
                 red: "Kırmızı",
                 blue: "Mavi",
                 purple: "Mor",

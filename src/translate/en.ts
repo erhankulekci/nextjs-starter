@@ -2,7 +2,7 @@ const en = {
     navigation: {
         home: "Home",
         page1: "Sample Page",
-        page2: "Gib-Ui Usages",
+        page2: "Sphinx-Ui Usages",
         page3: "Advanced Form",
         logoutButton: "Logout",
         notification: "Notifications",
@@ -21,7 +21,7 @@ const en = {
             notFoundButton: "Test 404 Page",
             skeletonButton: "Test Skeleton Usage",
             heroParagraph: [
-                "Welcome to the GIB UI Starter Project",
+                "Welcome to the SPHINX UI Starter Project",
                 `This package is an optimized starting point for those who want to open modern web applications. With its comprehensive feature set and user-friendly APIs, it helps you quickly launch your projects and create a powerful front-end development, advanced, interactive and stylish using today's technologies "The project incorporates modern design principles and provides the basic building blocks necessary to create user-friendly modules."`,
                 "Start using this starter project to quickly get started on your project and create an impressive user experience!"
             ]
@@ -64,7 +64,7 @@ const en = {
             snackbarMessage: "Adding a contact was completed successfully"
         },
         page2: {
-            title: "GIB-UI Components Sample Page"
+            title: "SPHINX-UI Components Sample Page"
         },
         page3: {
             title: "Page 3",
@@ -106,7 +106,7 @@ const en = {
             resetButtonText: "Reset",
 
             colors: {
-                gib: "GİB",
+                sphinx: "SPHINX",
                 red: "Red",
                 blue: "Blue",
                 purple: "Purple",

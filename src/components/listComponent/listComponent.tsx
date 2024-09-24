@@ -1,6 +1,6 @@
 "use client";
 import React, { useEffect, useState } from "react";
-import { DataGrid, DataGridProps } from "@gib-ui/core";
+import { DataGrid, DataGridProps } from "@sphinx-ui/core";
 import { useAppSelector } from "@/redux/hooks";
 import { customization } from "@/redux/slices/customizationSlice";
 import { useAxios } from "@/hooks";

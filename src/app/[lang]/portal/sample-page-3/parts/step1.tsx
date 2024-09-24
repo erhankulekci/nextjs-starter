@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Locale } from "@/root/i18n.config";
-import { Paper } from "@gib-ui/core";
+import { Paper } from "@sphinx-ui/core";
 import { getTranslate } from "@/lib";
 import { Tab1, Tab2 } from "./tabs";
 import { Tabs } from "@/components";

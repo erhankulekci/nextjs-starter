@@ -3,7 +3,7 @@ import { getTranslate } from "@/lib";
 import { Locale } from "@/root/i18n.config";
 import { Button } from "@/components";
 import { useState } from "react";
-import { Skeleton } from "@gib-ui/core";
+import { Skeleton } from "@sphinx-ui/core";
 import Link from "next/link";
 import Image from "next/image";
 import hero from "@/assets/images/hero.svg";

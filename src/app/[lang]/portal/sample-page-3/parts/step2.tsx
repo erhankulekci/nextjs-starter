@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { ListComponent, Paper } from "@/components";
-import { BubbleFilters, Grid } from "@gib-ui/core";
+
+import { BubbleFilters, Grid } from "@sphinx-ui/core";
 import { useAppSelector } from "@/redux/hooks";
 import { customization } from "@/redux/slices/customizationSlice";
 import { Locale } from "@/root/i18n.config";

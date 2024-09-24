@@ -17,7 +17,7 @@ import {
 } from "@/redux/slices/customizationSlice";
 
 import { Locale } from "@/root/i18n.config";
-import { Box, Drawer, Typography } from "@gib-ui/core";
+import { Box, Drawer, Typography } from "@sphinx-ui/core";
 import { Icons } from "@gib-ui/icons";
 import React, { useEffect, useState } from "react";
 import {
@@ -26,7 +26,14 @@ import {
     getCurrentSidebarColorName
 } from "@/utils/getCurrentColorNames";
 
-export type ThemeColorOptions = "gib" | "blue" | "red" | "yellow" | "green" | "orange" | "purple";
+export type ThemeColorOptions =
+    | "sphinx"
+    | "blue"
+    | "red"
+    | "yellow"
+    | "green"
+    | "orange"
+    | "purple";
 
 export type ColorButtons = {
     id: any;

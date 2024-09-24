@@ -1,7 +1,7 @@
 "use client";
 import React from "react";
 import Link from "next/link";
-import { Grid, Typography } from "@gib-ui/core";
+import { Grid, Typography } from "@sphinx-ui/core";
 import { Button } from "@/components";
 import { Form, InputField } from "@/components";
 import { getTranslate } from "@/lib";

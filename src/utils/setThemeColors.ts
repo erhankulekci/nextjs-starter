@@ -1,23 +1,23 @@
 import { CustomizationState } from "@/redux/slices/customizationSlice";
 import {
-    gibThemeColors,
     blueThemeColors,
     goldenThemeColors,
     greenThemeColors,
     orangeThemeColors,
     purpleThemeColors,
-    redThemeColors
+    redThemeColors,
+    sphinxThemeColors
 } from "@/assets/colors/themeColors";
 
 let themeColors = {
     ...blueThemeColors
 };
 export const setThemeColors = (state: CustomizationState, color: string) => {
-    // "gib" | "blue" | "red" | "yellow" | "green" | "purple" | "orange"
+    // "sphinx" | "blue" | "red" | "yellow" | "green" | "purple" | "orange"
 
     switch (color) {
-        case "gib":
-            themeColors = { ...gibThemeColors };
+        case "sphinx":
+            themeColors = { ...sphinxThemeColors };
             break;
         case "blue":
             themeColors = { ...blueThemeColors };
@@ -54,8 +54,8 @@ export const setThemeColors = (state: CustomizationState, color: string) => {
 };
 export const setHeaderColor = (state: CustomizationState, color: string) => {
     switch (color) {
-        case "gib":
-            state.headerBgColor = gibThemeColors.header;
+        case "sphinx":
+            state.headerBgColor = sphinxThemeColors.header;
             break;
         case "blue":
             state.headerBgColor = blueThemeColors.header;
@@ -82,8 +82,8 @@ export const setHeaderColor = (state: CustomizationState, color: string) => {
 
 export const setFooterColor = (state: CustomizationState, color: string) => {
     switch (color) {
-        case "gib":
-            state.footerBgColor = gibThemeColors.footer;
+        case "sphinx":
+            state.footerBgColor = sphinxThemeColors.footer;
             break;
         case "blue":
             state.footerBgColor = blueThemeColors.footer;
@@ -110,8 +110,8 @@ export const setFooterColor = (state: CustomizationState, color: string) => {
 
 export const setSidebarColor = (state: CustomizationState, color: string) => {
     switch (color) {
-        case "gib":
-            state.sidebarBgColor = gibThemeColors.sidebar;
+        case "sphinx":
+            state.sidebarBgColor = sphinxThemeColors.sidebar;
             break;
         case "blue":
             state.sidebarBgColor = blueThemeColors.sidebar;

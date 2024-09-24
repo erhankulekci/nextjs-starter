@@ -1,5 +1,5 @@
 import {
-    gibThemeColors,
+    sphinxThemeColors,
     blueThemeColors,
     goldenThemeColors,
     greenThemeColors,
@@ -14,8 +14,8 @@ export const getCurrentHeaderColorName = (currentHeaderColor: string) => {
         case blueThemeColors.header:
             headerColorName = blueThemeColors.themeName;
             break;
-        case gibThemeColors.header:
-            headerColorName = gibThemeColors.themeName;
+        case sphinxThemeColors.header:
+            headerColorName = sphinxThemeColors.themeName;
             break;
         case redThemeColors.header:
             headerColorName = redThemeColors.themeName;
@@ -43,8 +43,8 @@ export const getCurrentSidebarColorName = (currentSidebarColor: string) => {
         case blueThemeColors.sidebar:
             sidebarColorName = blueThemeColors.themeName;
             break;
-        case gibThemeColors.sidebar:
-            sidebarColorName = gibThemeColors.themeName;
+        case sphinxThemeColors.sidebar:
+            sidebarColorName = sphinxThemeColors.themeName;
             break;
         case redThemeColors.sidebar:
             sidebarColorName = redThemeColors.themeName;
@@ -72,8 +72,8 @@ export const getCurrentFooterColorName = (currentFooterColor: string) => {
         case blueThemeColors.footer:
             footerColorName = blueThemeColors.themeName;
             break;
-        case gibThemeColors.footer:
-            footerColorName = gibThemeColors.themeName;
+        case sphinxThemeColors.footer:
+            footerColorName = sphinxThemeColors.themeName;
             break;
         case redThemeColors.footer:
             footerColorName = redThemeColors.themeName;

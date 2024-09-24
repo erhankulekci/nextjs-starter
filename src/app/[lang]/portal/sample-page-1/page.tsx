@@ -5,7 +5,7 @@ import {
     rows
     // testColumns
 } from "@/enums/pages/samplePage1";
-import { Breadcrumbs, Grid, Paper, Stack } from "@gib-ui/core";
+import { Breadcrumbs, Grid, Paper, Stack } from "@sphinx-ui/core";
 import { Locale } from "@/root/i18n.config";
 import { useSnackbar } from "notistack";
 import { useRef, useState } from "react";

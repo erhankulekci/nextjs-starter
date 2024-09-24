@@ -1,11 +1,11 @@
 "use client";
 import React from "react";
-import { FileUpload as GibFileUpload, FileUploadProps } from "@gib-ui/core";
+import { FileUpload as SphinxFileUpload, FileUploadProps } from "@sphinx-ui/core";
 import { Button } from "@/components";
 
 const FileUpload = ({ formButton, buttonLabel, ...rest }: FileUploadProps) => {
     const button = <Button buttontype="general">{buttonLabel || "Dosya Seç"}</Button>;
-    return <GibFileUpload {...rest} formButton={formButton || button} />;
+    return <SphinxFileUpload {...rest} formButton={formButton || button} />;
 };
 
 export default FileUpload;
