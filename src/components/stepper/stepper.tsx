@@ -1,6 +1,6 @@
 "use client";
 import React from "react";
-import { GibStepper, GibStepperProps } from "@gib-ui/core";
+import { GibStepper, GibStepperProps } from "@sphinx-ui/core";
 import { useAppSelector } from "@/redux/hooks";
 import { customization } from "@/redux/slices/customizationSlice";
 

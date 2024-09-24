@@ -1,4 +1,4 @@
-import { Box, Card } from "@gib-ui/core";
+import { Box, Card } from "@sphinx-ui/core";
 import React from "react";
 import logo from "../../../../public/100ico.svg";
 import Image from "next/image";
@@ -35,10 +35,7 @@ const NotificationCard = () => {
                 }}
             >
                 <Image src={logo} width={50} height={50} alt="logo" />
-                <Box>
-                    Dijital Vergi Dairesinin 7/10/2023 tarihinde hizmete açılması ile İnteraktif
-                    Vergi Dairesi (ivd.gib.gov.tr), İnternet Vergi Dairesi...
-                </Box>
+                <Box>Lorem ipsum dolor sit amet exelsior ipsum dolor sit lorem ipsum...</Box>
                 <span
                     style={{
                         height: "15px",
@@ -61,10 +58,7 @@ const NotificationCard = () => {
                 }}
             >
                 <Image src={logo} width={50} height={50} alt="logo" />
-                <Box>
-                    Dijital Vergi Dairesinin 7/10/2023 tarihinde hizmete açılması ile İnteraktif
-                    Vergi Dairesi (ivd.gib.gov.tr), İnternet Vergi Dairesi...
-                </Box>
+                <Box>Lorem ipsum dolor sit amet exelsior ipsum dolor sit lorem ipsum...</Box>
                 <span
                     style={{
                         height: "15px",

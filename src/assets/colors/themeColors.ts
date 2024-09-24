@@ -1,5 +1,5 @@
-export const gibThemeColors = {
-    themeName: "gib",
+export const sphinxThemeColors = {
+    themeName: "sphinx",
     header: "linear-gradient(to right, #1E3B3F, #0a5d69)",
     footer: "linear-gradient(to right, #1E3B3F, #0A5D69)",
     sidebar: "linear-gradient(to bottom, #1E3B3F, #0A5D69)",

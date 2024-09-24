@@ -2,7 +2,7 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { i18n } from "@/root/i18n.config";
-import { Grid, Typography } from "@gib-ui/core";
+import { Grid, Typography } from "@sphinx-ui/core";
 import { useAppSelector } from "@/redux/hooks";
 import { customization } from "@/redux/slices/customizationSlice";
 

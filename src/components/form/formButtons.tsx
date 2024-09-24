@@ -1,6 +1,6 @@
 import React from "react";
 import { FormButtonsProps } from "./form";
-import { Grid } from "@gib-ui/core";
+import { Grid } from "@sphinx-ui/core";
 import { Button } from "@/components";
 
 const FormButtons = (props: FormButtonsProps) => {

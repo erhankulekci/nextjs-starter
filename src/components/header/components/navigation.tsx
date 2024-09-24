@@ -4,7 +4,7 @@ import styles from "../header.module.css";
 import LocaleSwitcher from "../localeSwitcher";
 import { Locale } from "@/root/i18n.config";
 import { getTranslate } from "@/lib";
-import { Badge, ClickAwayListener, Grid, Typography } from "@gib-ui/core";
+import { Badge, ClickAwayListener, Grid, Typography } from "@sphinx-ui/core";
 import { useAppSelector, useAppDispatch } from "@/redux//hooks";
 import { showSidebar, setShowSidebar } from "@/redux/slices/sidebarSlice";
 import { Icons } from "@gib-ui/icons";

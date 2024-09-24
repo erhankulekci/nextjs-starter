@@ -1,4 +1,4 @@
-import { Box, Grid, IconButton, Stack, Typography } from "@gib-ui/core";
+import { Box, Grid, IconButton, Stack, Typography } from "@sphinx-ui/core";
 import { Icons } from "@gib-ui/icons";
 import React from "react";
 

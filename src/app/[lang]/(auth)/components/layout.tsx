@@ -1,5 +1,5 @@
 import React from "react";
-import { Box, Grid, Stack } from "@gib-ui/core";
+import { Box, Grid, Stack } from "@sphinx-ui/core";
 import { Header } from ".";
 import dynamic from "next/dynamic";
 import { useWindowSize } from "@/hooks";

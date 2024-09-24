@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { Box, Typography, TextField, FormControl, ClickAwayListener, Grid } from "@gib-ui/core";
+import { Box, Typography, TextField, FormControl, ClickAwayListener, Grid } from "@sphinx-ui/core";
 import { sideMenuStyles as styles } from "./sideMenuStyles";
 import { useWindowSize } from "@/hooks";
 import { Icons } from "@gib-ui/icons";
@@ -169,7 +169,7 @@ const MenuItemComponent: React.FC<{
                         {item.children?.map((child) => (
                             <Box
                                 key={child.id}
-                                onClick={(e) => {
+                                onClick={(e: any) => {
                                     onItemClick(child);
                                     setMenuDetailActive(false);
                                     e.stopPropagation();
@@ -253,7 +253,7 @@ const MenuItemComponent: React.FC<{
                                                     labeltext=""
                                                     placeholder={megaMenuSearchPlaceholder || "ara"}
                                                     sx={styles.searchInputDetailStyle}
-                                                    onChange={(e) => {
+                                                    onChange={(e: any) => {
                                                         setSearchInput(e.target.value);
                                                         if (onMegaMenuSearchChange)
                                                             onMegaMenuSearchChange(e);
@@ -279,7 +279,7 @@ const MenuItemComponent: React.FC<{
                                         ?.map((child) => (
                                             <Box
                                                 key={child.id}
-                                                onClick={(e) => {
+                                                onClick={(e: any) => {
                                                     onItemClick(child);
                                                     setMenuDetailActive(false);
                                                     e.stopPropagation();
@@ -321,7 +321,7 @@ const MenuItemComponent: React.FC<{
                                                 sx={{
                                                     ...styles.favouriteLinkItemStyle
                                                 }}
-                                                onClick={(e) => {
+                                                onClick={(e: any) => {
                                                     onItemClick(link);
                                                     setMenuDetailActive(false);
                                                     e.stopPropagation();
@@ -465,7 +465,7 @@ const SideMenu = ({
                                     border: "none !important"
                                 }
                             }}
-                            onChange={(e) => {
+                            onChange={(e: any) => {
                                 setSearchKey(e.target.value);
                                 if (onSideMenuSearchChange) onSideMenuSearchChange(e);
                             }}

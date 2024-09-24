@@ -1,13 +1,13 @@
 "use client";
 import React from "react";
-import { RadioGroup as GibRadioGroup, RadioGroupProps } from "@gib-ui/core";
+import { RadioGroup as SphinxRadioGroup, RadioGroupProps } from "@sphinx-ui/core";
 import { useAppSelector } from "@/redux/hooks";
 import { customization } from "@/redux/slices/customizationSlice";
 
 const RadioGroup = (props: RadioGroupProps) => {
     const styles = useAppSelector(customization);
     return (
-        <GibRadioGroup
+        <SphinxRadioGroup
             checkedColor={styles.primaryColor}
             labelFocusedColor={styles.primaryColor}
             labelSx={{ fontSize: styles.fontSize }}

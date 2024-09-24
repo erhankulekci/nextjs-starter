@@ -2,7 +2,7 @@
 import React, { useEffect, useImperativeHandle } from "react";
 import { useForm, FormProvider, SubmitHandler } from "react-hook-form";
 import { useAxios } from "@/hooks";
-import { Grid } from "@gib-ui/core";
+import { Grid } from "@sphinx-ui/core";
 import FormButtons from "./formButtons";
 import * as yup from "yup";
 import { yupResolver } from "@hookform/resolvers/yup";

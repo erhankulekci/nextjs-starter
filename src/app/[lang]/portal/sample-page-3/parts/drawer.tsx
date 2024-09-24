@@ -1,6 +1,6 @@
 "use client";
 import React from "react";
-import { Box, Card, Divider, IconButton, Stack } from "@gib-ui/core";
+import { Box, Card, Divider, IconButton, Stack } from "@sphinx-ui/core";
 import { useAppSelector } from "@/redux/hooks";
 import { customization } from "@/redux/slices/customizationSlice";
 import { Button } from "@/components";

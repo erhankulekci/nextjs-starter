@@ -3,7 +3,7 @@ import { getTranslate } from "@/lib";
 import { useAppSelector } from "@/redux/hooks";
 import { customization } from "@/redux/slices/customizationSlice";
 import { Locale } from "@/root/i18n.config";
-import { Grid, Paper, Stack, Typography } from "@gib-ui/core";
+import { Grid, Paper, Stack, Typography } from "@sphinx-ui/core";
 import React from "react";
 
 const Summary = ({ lang }: { lang: Locale }) => {

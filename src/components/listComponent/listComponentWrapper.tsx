@@ -1,6 +1,6 @@
 import { useAppSelector } from "@/redux/hooks";
 import { customization } from "@/redux/slices/customizationSlice";
-import { Box } from "@gib-ui/core";
+import { Box } from "@sphinx-ui/core";
 import React from "react";
 
 const ListComponentWrapper = ({ children }: { children: React.ReactNode }) => {

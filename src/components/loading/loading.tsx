@@ -1,7 +1,7 @@
 "use client";
 import * as React from "react";
 import loadingAnimation from "@/assets/animation/loading.json";
-import { Backdrop } from "@gib-ui/core";
+import { Backdrop } from "@sphinx-ui/core";
 import dynamic from "next/dynamic";
 
 const Lottie = dynamic(() => import("lottie-react"), { ssr: false });

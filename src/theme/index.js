@@ -1,4 +1,4 @@
-import { createTheme } from "@gib-ui/core";
+import { createTheme } from "@sphinx-ui/core";
 
 // assets
 import colors from "../assets/scss/_themes-vars.module.scss";

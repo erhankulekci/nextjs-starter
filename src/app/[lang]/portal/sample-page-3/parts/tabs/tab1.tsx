@@ -2,7 +2,7 @@
 import React from "react";
 import { customization } from "@/redux/slices/customizationSlice";
 import { Form, InputField, Autocomplete } from "@/components";
-import { Grid, Stack, Typography } from "@gib-ui/core";
+import { Grid, Stack, Typography } from "@sphinx-ui/core";
 import { useAppSelector } from "@/redux/hooks";
 import { Locale } from "@/root/i18n.config";
 import { getTranslate } from "@/lib";

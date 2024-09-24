@@ -1,5 +1,5 @@
 import React, { useEffect, useRef, useState } from "react";
-import { Backdrop, Card, Grid, SearchInput, Stack } from "@gib-ui/core";
+import { Backdrop, Card, Grid, SearchInput, Stack } from "@sphinx-ui/core";
 import { useWindowSize } from "@/hooks";
 
 const SearchLayout = ({ children }: { children: React.ReactElement }) => {

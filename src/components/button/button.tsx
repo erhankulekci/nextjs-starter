@@ -1,6 +1,7 @@
 "use client";
+
 import React from "react";
-import { Button as GibButton, ButtonProps } from "@gib-ui/core";
+import { Button as SphinxButton, ButtonProps } from "@sphinx-ui/core";
 import { useAppSelector } from "@/redux/hooks";
 import { customization } from "@/redux/slices/customizationSlice";
 
@@ -44,7 +45,7 @@ const Button = ({ sx, ...props }: ButtonProps) => {
     }
 
     return (
-        <GibButton
+        <SphinxButton
             sx={{
                 borderRadius: styles.borderRadius,
                 backgroundColor: bgColor,
@@ -58,7 +59,7 @@ const Button = ({ sx, ...props }: ButtonProps) => {
             {...props}
         >
             {props.children}
-        </GibButton>
+        </SphinxButton>
     );
 };
 

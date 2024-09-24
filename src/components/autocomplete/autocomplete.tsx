@@ -1,14 +1,14 @@
 "use client";
 import React from "react";
 import {
-    Autocomplete as GibAutocomplete,
-    AutocompleteProps as GibAutocompleteProps
-} from "@gib-ui/core";
+    Autocomplete as SphinxAutoComplete,
+    AutocompleteProps as SphinxAutoCompleteProps
+} from "@sphinx-ui/core";
 import { useAppSelector } from "@/redux/hooks";
 import { customization } from "@/redux/slices/customizationSlice";
 import { Controller, useFormContext } from "react-hook-form";
 
-interface AutocompleteProps extends GibAutocompleteProps {
+interface AutocompleteProps extends SphinxAutoCompleteProps {
     onChange?: (event: React.SyntheticEvent, value: any, reason?: any, details?: any) => void;
 }
 
@@ -22,7 +22,7 @@ const Autocomplete = (props: AutocompleteProps) => {
             control={control}
             render={({ field, fieldState }) => {
                 return (
-                    <GibAutocomplete
+                    <SphinxAutoComplete
                         borderRadius={styles.borderRadius}
                         labelFocusedColor={styles.primaryColor}
                         labelSx={{ fontSize: styles.fontSize }}

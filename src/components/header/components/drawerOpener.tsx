@@ -1,5 +1,5 @@
 import { CustomizationState } from "@/redux/slices/customizationSlice";
-import { Box } from "@gib-ui/core";
+import { Box } from "@sphinx-ui/core";
 import { Icons } from "@gib-ui/icons";
 import React from "react";
 

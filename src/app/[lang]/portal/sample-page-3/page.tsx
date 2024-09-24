@@ -1,7 +1,7 @@
 "use client";
 import React from "react";
 import { Locale } from "@/root/i18n.config";
-import { Breadcrumbs, Stack } from "@gib-ui/core";
+import { Breadcrumbs, Stack } from "@sphinx-ui/core";
 import { getTranslate } from "@/lib";
 import { Step1, Step2, Summary, Drawer } from "./parts";
 import { Alert, Stepper } from "@/components";

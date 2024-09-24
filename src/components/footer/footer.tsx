@@ -1,6 +1,6 @@
 "use client";
 import React from "react";
-import { Footer } from "@gib-ui/core";
+import { Footer } from "@sphinx-ui/core";
 import { Locale } from "@/root/i18n.config";
 import { getTranslate } from "@/lib";
 import Image from "next/image";

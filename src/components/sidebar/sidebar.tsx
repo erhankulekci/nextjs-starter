@@ -1,6 +1,6 @@
 "use client";
 import React, { useEffect, useRef, useState } from "react";
-import { Backdrop } from "@gib-ui/core";
+import { Backdrop } from "@sphinx-ui/core";
 import { Locale } from "@/root/i18n.config";
 import { getTranslate } from "@/lib";
 import { useAppSelector, useAppDispatch } from "@/redux//hooks";
