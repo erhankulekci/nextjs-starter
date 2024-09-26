@@ -4,7 +4,8 @@ import { Locale } from "@/root/i18n.config";
 import styles from "../header.module.css";
 import Image from "next/image";
 import Link from "next/link";
-import logo from "../../../assets/images/headerLogo.webp";
+import logo from "../../../assets/images/logo.svg";
+import content from "../../../assets/images/content.svg";
 import { Box } from "@sphinx-ui/core";
 
 const Logo = ({
@@ -17,19 +18,15 @@ const Logo = ({
     logoHeight?: number;
 }) => {
     return (
-        <Link className={styles.link} href={`/${lang}/portal`}>
+        <Link href={`/${lang}/portal`}>
             <Box className={styles.logoContainer}>
+                <Image src={logo} width={logoWidth || 80} height={logoHeight || 45} alt="logo" />
                 <Image
-                    src={logo}
-                    width={logoWidth || 45}
+                    src={content}
+                    width={logoWidth || 120}
                     height={logoHeight || 45}
                     alt="logo"
-                    className={styles.logoImage}
                 />
-                <Box className={styles.logoTextContainer}>
-                    <span className={styles.logoMainText}>SPHINX</span>
-                    <span className={styles.logoSubText}> STARTER PROJECT</span>
-                </Box>
             </Box>
         </Link>
     );
