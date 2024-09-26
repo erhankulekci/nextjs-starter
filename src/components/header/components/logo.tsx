@@ -4,18 +4,30 @@ import { Locale } from "@/root/i18n.config";
 import styles from "../header.module.css";
 import Image from "next/image";
 import Link from "next/link";
-import { useWindowSize } from "@/hooks";
+import logo from "../../../assets/images/logo.svg";
+import content from "../../../assets/images/content.svg";
+import { Box } from "@sphinx-ui/core";
 
-const Logo = ({ lang }: { lang: Locale }) => {
-    const { width } = useWindowSize();
+const Logo = ({
+    lang,
+    logoWidth,
+    logoHeight
+}: {
+    lang?: Locale;
+    logoWidth?: number;
+    logoHeight?: number;
+}) => {
     return (
-        <Link className={styles.link} href={`/${lang}/portal`}>
-            <Image
-                src={width < 600 ? "/Logo-light-mini.svg" : "/Logo-light.svg"}
-                width={width < 600 ? 63 : 230}
-                height={35}
-                alt="logo"
-            />
+        <Link href={`/${lang}/portal`}>
+            <Box className={styles.logoContainer}>
+                <Image src={logo} width={logoWidth || 80} height={logoHeight || 45} alt="logo" />
+                <Image
+                    src={content}
+                    width={logoWidth || 120}
+                    height={logoHeight || 45}
+                    alt="logo"
+                />
+            </Box>
         </Link>
     );
 };

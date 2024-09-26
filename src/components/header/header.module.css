@@ -38,11 +38,6 @@
     column-gap: 5px;
 }
 
-.link {
-    color: white;
-    height: 35px;
-}
-
 .menuButton {
     background-color: transparent;
     color: #fff;
@@ -58,4 +53,9 @@
     align-items: center;
     justify-content: center;
     cursor: pointer;
+}
+
+.logoContainer {
+    display: flex;
+    align-items: center;
 }
